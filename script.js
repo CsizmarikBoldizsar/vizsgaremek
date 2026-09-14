@@ -1,4 +1,5 @@
 const test = document.getElementById("demo");
+const div = document.getElementById("root");
 const recipeBlock = document.getElementById("recipe"); 
 const recipeIngredients = document.getElementById("ingredient");
 const navBar = document.getElementById("navBar");
