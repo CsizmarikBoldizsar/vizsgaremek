@@ -1,9 +1,54 @@
-#navBar{
-    height: 30px;
-    background-color: red;
+#navbar {
+    background-color: #b76051;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: sticky;
+    align-items: center;
 }
-#header{
-    border: 5px, solid, black;
-    background-color: green;
-    margin: 0px, 0px, 0px, 0px;
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+}
+
+#searchbar {
+    border-radius: 50px;
+    background-color: white;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    float: right;
+    margin: 5px;
+}
+
+.left {
+    display: flex;
+    justify-content: start;
+    width: calc(100%/3);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    width: calc(100%/3);
+}
+
+.right {
+    display: flex;
+    justify-content: end;
+    width: calc(100%/3);
 }
