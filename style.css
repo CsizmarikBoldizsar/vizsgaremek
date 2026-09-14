@@ -13,7 +13,7 @@ body {
 }
 
 .button {
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     width: 40px;
     height: 40px;
     margin: 5px;
@@ -52,3 +52,45 @@ body {
     justify-content: end;
     width: calc(100%/3);
 }
+
+
+#recipes{
+    background-image: url(icons/recipebook.svg);
+    /*------------------------------------------Move to .button*/
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------------------------------------*/
+}
+
+#cooking{
+    background-image: url(icons/chefhat.svg);
+    /*------------------------------------------Move to .button*/
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------------------------------------*/
+}
+
+#shoppinglist{
+    background-image: url(icons/shoppinglist.svg);
+    /*------------------------------------------Move to .button*/
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------------------------------------*/
+}
+
+#account{
+    background-image: url(icons/account.svg);
+    /*------------------------------------------Move to .button*/
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------------------------------------*/
+}
+
