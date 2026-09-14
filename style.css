@@ -53,6 +53,14 @@ body {
     width: calc(100%/3);
 }
 
+#menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*------------------------------------------Move to .button*/
+    background-color: rgba(0, 0, 0, 0);
+    /*------------------------------------------*/
+}
 
 #recipes{
     background-image: url(icons/recipebook.svg);
@@ -94,3 +102,49 @@ body {
     /*------------------------------------------*/
 }
 
+#root{
+
+    /*remove*/
+    padding: 100px;
+    /*------*/
+}
+
+#menusvg line{
+    transition-duration: 0.3s;
+    stroke-width: 1.2px;
+    stroke-linecap: round;
+    stroke: white;
+}
+
+#lineTL{
+
+    transform-origin: 1px 1px;
+}
+#lineTR{
+    transform-origin: 9px 1px;
+}
+
+#lineML{
+    transform-origin: 5px 5px;
+}
+#lineMR{
+    transform-origin: 5px 5px;
+}
+
+#lineBL{
+    transform-origin: 1px 9px;
+}
+#lineBR{
+    transform-origin: 9px 9px;
+}
+
+
+
+#menusvg:hover #lineTL, #menusvg:hover #lineBR, #menusvg:hover #lineML{
+    /*stroke: red;*/
+    transform: rotate(45deg);
+}
+#menusvg:hover #lineTR, #menusvg:hover #lineBL, #menusvg:hover #lineMR{
+    /*stroke: red;*/
+    transform: rotate(-45deg);
+}
