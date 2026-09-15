@@ -1,7 +1,7 @@
 const div = document.getElementById("root");
 const recipeBlock = document.getElementById("recipe"); 
 const recipeIngredients = document.getElementById("ingredient");
-const navBar = document.getElementById("navBar");
+const settings = document.getElementById("settings");
 const searchBar = document.getElementById("searchBar");
 const menu = document.getElementById("menu");
 const recipes = document.getElementById("recipes");
@@ -30,12 +30,23 @@ function profile(){
     open("account.html", "_self")
     console.log("okay👍")
 }
+function setting(){
+    //div.innerHTML.createElement("ul")
+    div.innerHTML += `<div id="list">
+                <ul>
+                    <li>no one is here to see this</li>
+                    <li>checking</li>
+                </ul>    
+            </div>`
+    console.log("done")
+}
 //oldal betöltéséért felelős függvény
 //elvileg
 function load(){
-    /**/
+    
 }
-shoppinglist.addEventListener("click", shopping)
-recipes.addEventListener("click", recipebook)
-cooking.addEventListener("click", idkmegnemdontottemel)
-account.addEventListener("click", profile)
+shoppinglist.addEventListener("click", shopping);
+recipes.addEventListener("click", recipebook);
+cooking.addEventListener("click", idkmegnemdontottemel);
+account.addEventListener("click", profile);
+settings.addEventListener("click", setting);
