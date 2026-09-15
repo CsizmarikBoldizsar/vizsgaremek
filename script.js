@@ -6,5 +6,10 @@ const navBar = document.getElementById("navBar");
 const searchBar = document.getElementById("searchBar");
 const menu = document.getElementById("menu");
 const recipeBook = document.getElementById("recipeBook");
-const shopList = document.getElementById("shopList");
+const shoppinglist = document.getElementById("shoppinglist");
 //kell Id neveket kitalálni, de később még változtathatunk rajta
+function shopping(){
+    open("index/shopping.html")
+    console.log("okay")
+}
+shoppinglist.addEventListener("click", shopping)
