@@ -134,6 +134,11 @@ body {
 }
 #settings{
     background-image: url(icons/settings.svg);
+
+    position: fixed;
+    left: 50px;
+    top: calc( (1px - round(down, 100vw, 710px) / 710) * 50 ) ;
+    background-color: red;
 }
 
 
@@ -148,7 +153,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 
 
 
