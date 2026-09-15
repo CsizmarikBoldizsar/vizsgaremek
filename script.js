@@ -9,7 +9,10 @@ const recipeBook = document.getElementById("recipeBook");
 const shoppinglist = document.getElementById("shoppinglist");
 //kell Id neveket kitalálni, de később még változtathatunk rajta
 function shopping(){
-    open("index/shopping.html")
-    console.log("okay")
+    /*open("index/shopping.html")*/
+    console.log("okay👍")
+}
+function load(){
+    /**/
 }
 shoppinglist.addEventListener("click", shopping)
