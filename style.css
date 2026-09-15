@@ -10,6 +10,8 @@
 body {
     padding: 0px;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .button {
@@ -23,84 +25,115 @@ body {
     display: flex;
     user-select: none;
     cursor: pointer;
+
+    min-width: 40px;
+    min-height: 40px;
+
+
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #searchbar {
-    border-radius: 50px;
-    background-color: white;
     width: 400px;
     height: 40px;
     display: flex;
     float: right;
     margin: 5px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+
+
 }
+
+#searchbar #start{
+    background-image: url(icons/searchbarstart.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+#searchbar #field{
+    min-height: 40px;
+    width: calc(100% - 40px);
+    border: none;
+    padding-left: 12px;
+}
+#searchbar #end{
+    background-image: url(icons/searchbarend.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 40px;
+    min-width: 40px;
+}
+
+#searchbarPlaceholder{
+    min-width: 400px;
+    width: 400px;
+}
+
 
 .left {
     display: flex;
     justify-content: start;
     width: calc(100%/3);
+    min-width: min-content;
 }
 
 .center {
     display: flex;
     justify-content: center;
     width: calc(100%/3);
+    min-width: min-content;
 }
 
 .right {
     display: flex;
     justify-content: end;
     width: calc(100%/3);
+    min-width: min-content;
 }
 
 #menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*------------------------------------------Move to .button*/
-    background-color: rgba(0, 0, 0, 0);
-    /*------------------------------------------*/
+    display: none;
 }
 
 #recipes{
     background-image: url(icons/recipebook.svg);
-    /*------------------------------------------Move to .button*/
-    background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
-    background-position: center;
-    background-repeat: no-repeat;
-    /*------------------------------------------*/
+
 }
 
 #cooking{
     background-image: url(icons/chefhat.svg);
-    /*------------------------------------------Move to .button*/
-    background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
-    background-position: center;
-    background-repeat: no-repeat;
-    /*------------------------------------------*/
 }
 
 #shoppinglist{
     background-image: url(icons/shoppinglist.svg);
-    /*------------------------------------------Move to .button*/
-    background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
-    background-position: center;
-    background-repeat: no-repeat;
-    /*------------------------------------------*/
 }
 
 #account{
     background-image: url(icons/account.svg);
-    /*------------------------------------------Move to .button*/
-    background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
-    background-position: center;
-    background-repeat: no-repeat;
-    /*------------------------------------------*/
 }
+
+#upload{
+    background-image: url(icons/add.svg);
+    background-size: 25px;
+}
+#settings{
+    background-image: url(icons/settings.svg);
+}
+
+
 
 #root{
 
@@ -109,42 +142,68 @@ body {
     /*------*/
 }
 
+
+
+
+/*----------------------------Menu line animation*/
+#menusvg{
+    width: 35px;
+    height: 35px;
+}
 #menusvg line{
     transition-duration: 0.3s;
     stroke-width: 1.2px;
     stroke-linecap: round;
     stroke: white;
 }
-
 #lineTL{
-
     transform-origin: 1px 1px;
 }
 #lineTR{
     transform-origin: 9px 1px;
 }
-
 #lineML{
     transform-origin: 5px 5px;
 }
 #lineMR{
     transform-origin: 5px 5px;
 }
-
 #lineBL{
     transform-origin: 1px 9px;
 }
 #lineBR{
     transform-origin: 9px 9px;
 }
-
-
-
 #menusvg:hover #lineTL, #menusvg:hover #lineBR, #menusvg:hover #lineML{
-    /*stroke: red;*/
     transform: rotate(45deg);
 }
 #menusvg:hover #lineTR, #menusvg:hover #lineBL, #menusvg:hover #lineMR{
-    /*stroke: red;*/
     transform: rotate(-45deg);
+}
+/*-------------------------------------------*/
+
+
+
+
+
+
+@media screen and (max-width: 710px){
+    #root{
+        background-color: red;
+        width: calc(100%);
+    }
+    #navbar{
+        width: 50px;
+        height: 100vh;
+        flex-direction: column;
+    }
+    body{
+        flex-direction: row;
+        flex-direction: row-reverse;
+    }
+    #searchbar{
+        position: fixed;
+        top: 0px;
+        left: calc(50vw - 200px);
+    }
 }
