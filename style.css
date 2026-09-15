@@ -1,262 +1,63 @@
-#navbar {
-    background-color: #b76051;
-    width: 100%;
-    height: 50px;
+#navbar{
+    height: 5vw;
+    max-height: 50px;
+    width: 100vw;
+    background-color: blue;
     display: flex;
-    position: sticky;
     align-items: center;
+    justify-content: space-between;
 }
 
-body {
-    padding: 0px;
-    margin: 0px;
+#navbar>div{
     display: flex;
-    flex-direction: column;
-   
-    justify-content: end;
-    align-items: end;
 }
 
-.button {
-    /*border-radius: 50%;*/
-    width: 40px;
-    height: 40px;
-    margin: 5px;
-    background-color: white;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    user-select: none;
-    cursor: pointer;
+.button{
+    height: 5vw;
+    max-height: 50px;
+    width: 5vw;
+    max-width: 50px;
 
-    min-width: 40px;
-    min-height: 40px;
-
-
-    background-size: contain;
-    background-color: rgba(0, 0, 0, 0);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#searchbar {
-    width: 400px;
-    height: 40px;
-    display: flex;
-    float: right;
-    margin: 5px;
+    background-color: yellow;
     border-radius: 50px;
-    align-items: center;
-    justify-content: center;
+}
 
+#searchbar{
+    height: 5vw;
+    max-height: 50px;
+    border-radius: 5vw;
+
+    display: flex;
     overflow: hidden;
+    justify-content: center;
 
-
-
+    width: 70vw;
 }
-
-#searchbar #start{
-    background-image: url(icons/searchbarstart.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
+#searchbar img{
+    height: 5vw;
+    max-height: 50px;
+    width: 5vw;
+    max-width: 50px;
 }
-#searchbar #field{
-    min-height: 40px;
-    width: calc(100% - 40px);
+#field{
     border: none;
-    padding-left: 12px;
-}
-#searchbar #end{
-    background-image: url(icons/searchbarend.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 40px;
-    min-width: 40px;
-}
-
-#searchbarPlaceholder{
-    min-width: 400px;
-    width: 400px;
-}
-
-
-.left {
-    display: flex;
-    justify-content: start;
-    width: calc(100%/3);
-    min-width: min-content;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    width: calc(100%/3);
-    min-width: min-content;
-}
-
-.right {
-    display: flex;
-    justify-content: end;
-    width: calc(100%/3);
-    min-width: min-content;
-}
-
-#menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-#recipes{
-    background-image: url(icons/recipebook.svg);
-
-}
-
-#cooking{
-    background-image: url(icons/chefhat.svg);
-}
-
-#shoppinglist{
-    background-image: url(icons/shoppinglist.svg);
-}
-
-#account{
-    background-image: url(icons/account.svg);
-}
-
-#upload{
-    background-image: url(icons/add.svg);
-    background-size: 25px;
-}
-#settings{
-    background-image: url(icons/settings.svg);
-
-    position: fixed;
-    left: 50px;
-    top: calc( (1px - round(down, 100vw, 710px) / 710) * 50 ) ;
-    background-color: red;
-}
-
-
-
-#content{
-    height: 100%;
+    height: 5vw;
     width: 100%;
-}
-#root{
-    padding: 0px;
-    margin: 0px;
+    padding-left: 2vw;
+    box-sizing: content-box;
+
     display: flex;
-    flex-direction: column;
+    align-self: center;
+
 }
 
-
-
-/*----------------------------Menu line animation*/
-#menusvg{
-    width: 35px;
-    height: 35px;
-}
-#menusvg line{
-    transition-duration: 0.3s;
-    stroke-width: 1.2px;
-    stroke-linecap: round;
-    stroke: white;
-}
-#lineTL{
-    transform-origin: 1px 1px;
-}
-#lineTR{
-    transform-origin: 9px 1px;
-}
-#lineML{
-    transform-origin: 5px 5px;
-}
-#lineMR{
-    transform-origin: 5px 5px;
-}
-#lineBL{
-    transform-origin: 1px 9px;
-}
-#lineBR{
-    transform-origin: 9px 9px;
-}
-#menusvg:hover #lineTL, #menusvg:hover #lineBR, #menusvg:hover #lineML{
-    transform: rotate(45deg);
-}
-#menusvg:hover #lineTR, #menusvg:hover #lineBL, #menusvg:hover #lineMR{
-    transform: rotate(-45deg);
-}
-/*-------------------------------------------*/
-
-#mobileNavber{
-    display: none;
-    justify-content: end;
-    align-items: center;
+body{
+    margin: 0px;
+    background-color: gainsboro;
 }
 
-
-
-
-@media screen and (max-width: 710px){
-    #content{
-        background-color: rgb(155, 155, 155);
-        min-width: calc(100vw - 40px);
-        min-height: calc(100vh - 50px);
-    }
+@media screen and (orientation: portrait) {
     #navbar{
-        width: 50px;
-        height: calc(100vh - 50px);
-        flex-direction: column;
-        flex-direction: column-reverse;
-
-    }
-    #root{
-        flex-direction: row;
-        flex-direction: row-reverse;
-    }
-    #searchbar{
-        position: fixed;
-        top: 0px;
-        left: calc(10vw);
-
-        min-width: 0px;
-        width: 60vw;
-    }
-    .right{
-        flex-direction: column;
-
-    }
-
-    #menu{
-        display: flex;
-        position: fixed;
-        top: 0px;
-        right: 0px;
-    }
-
-    #mobileNavber{
-        display: flex;
-        background-color: #b76051;
-        height: 50px;
-        width: 100vw;
-    }
-
-    #upload{
-        position: fixed;
-        top: 0px;
-        left: calc(50vw - 250px);
-
-        min-width: 0px;
-        min-height: 0px;
-        width: 5vw;
-        height: 5vw;
-    }
-    #field{
-
+        justify-content: center;
     }
 }
