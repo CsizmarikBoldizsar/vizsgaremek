@@ -1,0 +1,150 @@
+#navbar {
+    background-color: #b76051;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: sticky;
+    align-items: center;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.button {
+    /*border-radius: 50%;*/
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    user-select: none;
+    cursor: pointer;
+}
+
+#searchbar {
+    border-radius: 50px;
+    background-color: white;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    float: right;
+    margin: 5px;
+}
+
+.left {
+    display: flex;
+    justify-content: start;
+    width: calc(100%/3);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    width: calc(100%/3);
+}
+
+.right {
+    display: flex;
+    justify-content: end;
+    width: calc(100%/3);
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*------------------------------------------Move to .button*/
+    background-color: rgba(0, 0, 0, 0);
+    /*------------------------------------------*/
+}
+
+#recipes{
+    background-image: url(icons/recipebook.svg);
+    /*------------------------------------------Move to .button*/
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------------------------------------*/
+}
+
+#cooking{
+    background-image: url(icons/chefhat.svg);
+    /*------------------------------------------Move to .button*/
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------------------------------------*/
+}
+
+#shoppinglist{
+    background-image: url(icons/shoppinglist.svg);
+    /*------------------------------------------Move to .button*/
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------------------------------------*/
+}
+
+#account{
+    background-image: url(icons/account.svg);
+    /*------------------------------------------Move to .button*/
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*------------------------------------------*/
+}
+
+#root{
+
+    /*remove*/
+    padding: 100px;
+    /*------*/
+}
+
+#menusvg line{
+    transition-duration: 0.3s;
+    stroke-width: 1.2px;
+    stroke-linecap: round;
+    stroke: white;
+}
+
+#lineTL{
+
+    transform-origin: 1px 1px;
+}
+#lineTR{
+    transform-origin: 9px 1px;
+}
+
+#lineML{
+    transform-origin: 5px 5px;
+}
+#lineMR{
+    transform-origin: 5px 5px;
+}
+
+#lineBL{
+    transform-origin: 1px 9px;
+}
+#lineBR{
+    transform-origin: 9px 9px;
+}
+
+
+
+#menusvg:hover #lineTL, #menusvg:hover #lineBR, #menusvg:hover #lineML{
+    /*stroke: red;*/
+    transform: rotate(45deg);
+}
+#menusvg:hover #lineTR, #menusvg:hover #lineBL, #menusvg:hover #lineMR{
+    /*stroke: red;*/
+    transform: rotate(-45deg);
+}
