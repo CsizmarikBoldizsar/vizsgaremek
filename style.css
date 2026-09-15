@@ -12,6 +12,9 @@ body {
     margin: 0px;
     display: flex;
     flex-direction: column;
+   
+    justify-content: end;
+    align-items: end;
 }
 
 .button {
@@ -135,11 +138,15 @@ body {
 
 
 
+#content{
+    height: 100%;
+    width: 100%;
+}
 #root{
-
-    /*remove*/
-    padding: 100px;
-    /*------*/
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -182,28 +189,70 @@ body {
 }
 /*-------------------------------------------*/
 
-
+#mobileNavber{
+    display: none;
+    justify-content: end;
+    align-items: center;
+}
 
 
 
 
 @media screen and (max-width: 710px){
-    #root{
-        background-color: red;
-        width: calc(100%);
+    #content{
+        background-color: rgb(155, 155, 155);
+        min-width: calc(100vw - 40px);
+        min-height: calc(100vh - 50px);
     }
     #navbar{
         width: 50px;
-        height: 100vh;
+        height: calc(100vh - 50px);
         flex-direction: column;
+        flex-direction: column-reverse;
+
     }
-    body{
+    #root{
         flex-direction: row;
         flex-direction: row-reverse;
     }
     #searchbar{
         position: fixed;
         top: 0px;
-        left: calc(50vw - 200px);
+        left: calc(10vw);
+
+        min-width: 0px;
+        width: 60vw;
+    }
+    .right{
+        flex-direction: column;
+
+    }
+
+    #menu{
+        display: flex;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+    }
+
+    #mobileNavber{
+        display: flex;
+        background-color: #b76051;
+        height: 50px;
+        width: 100vw;
+    }
+
+    #upload{
+        position: fixed;
+        top: 0px;
+        left: calc(50vw - 250px);
+
+        min-width: 0px;
+        min-height: 0px;
+        width: 5vw;
+        height: 5vw;
+    }
+    #field{
+
     }
 }
