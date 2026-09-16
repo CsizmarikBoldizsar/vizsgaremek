@@ -31,7 +31,10 @@ function profile(){
     console.log("okay👍")
 }
 function setting(){
-    //div.innerHTML.createElement("ul")
+    /*let list = document.createElement("ul")
+    list.appendChild(document.createElement("il"))
+    div.innerHTML += list
+    */
     div.innerHTML += `<div id="list">
                 <ul>
                     <li>no one is here to see this</li>
