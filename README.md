@@ -6,6 +6,7 @@ Oldalunk használatával:
   - nyomonkövetheted a készítés folyamatát
   - tölthetsz fel és oszthatsz meg recepteket
   - digitalizálhatod kedvenc receptjeidet
+---
 Célunk, hogy megkönnyítsük a főzés/sütés folymatát.
 A feltöltött receptek között egyszerűen lehet válogatni görgetéssel,
 de akár rá is tudunk keresni egy adott receptre.
