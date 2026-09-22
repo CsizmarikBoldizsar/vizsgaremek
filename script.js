@@ -31,16 +31,17 @@ function profile(){
     console.log("okay👍")
 }
 function setting(){
-    /*let list = document.createElement("ul")
-    list.appendChild(document.createElement("il"))
-    div.innerHTML += list
-    */
-    div.innerHTML += `<div id="list">
+    let li = document.createElement("li")
+    li.innerText = "nem is rossz"
+    div.appendChild(li)
+    
+   /* div.innerHTML += `<div id="list">
                 <ul>
                     <li>no one is here to see this</li>
                     <li>checking</li>
                 </ul>    
-            </div>`
+            </div>`*/
+            div.innerText = "balls"
     console.log("done")
 }
 //oldal betöltéséért felelős függvény
@@ -48,8 +49,8 @@ function setting(){
 function load(){
     
 }
-shoppinglist.addEventListener("click", shopping);
+/*shoppinglist.addEventListener("click", shopping);
 recipes.addEventListener("click", recipebook);
 cooking.addEventListener("click", idkmegnemdontottemel);
-account.addEventListener("click", profile);
+account.addEventListener("click", profile);*/
 settings.addEventListener("click", setting);
