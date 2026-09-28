@@ -1,0 +1,185 @@
+body{
+    margin: 0px;
+}
+
+#navbar{
+    background-color: #db0050ff;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+div{
+
+}
+
+.icon{
+    aspect-ratio: 1/1;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.settings{
+    background-image: url(icons/settings.svg);
+}
+
+#account{
+    background-image: url(icons/account.svg);
+}
+#upload{
+    background-image: url(icons/add.svg);
+    width: 30px;
+    margin: 10px;
+}
+#list{
+    background-image: url(icons/shoppinglist.svg);
+}
+#saved{
+    background-image: url(icons/recipebook.svg);
+}
+#searchbar-icon{
+    background-image: url(icons/searchbarend.svg);
+    margin: 0px;
+}
+
+#menu{
+    background-image: url(icons/chefhat.svg);
+}
+
+.mobile{
+    display: none;
+}
+
+
+#searchbar{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 400px;
+}
+
+#searchfield{
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.open{
+    top: 0px;
+}
+
+
+@media screen and (max-width: 650px) and (orientation: landscape){
+    .icon{
+        width: 6vw;
+        height: 6vw;
+        margin: 0.75vw;
+    }
+    #upload{
+        width: 5vw;
+        height: 5vw;
+        margin: 1.2vw;
+    }
+    #searchfield{
+        height: 6vw;
+    }
+    #searchbar{
+        width: 60vw;
+        height: 6vw;
+        border-radius: 6vw;;
+    }
+    #navbar{
+        height: 7.5vw;
+    }
+    body{
+        background-color: aquamarine;
+    }
+}
+
+
+
+
+@media screen and (orientation: portrait){
+    .icon{
+        width: 7vw;
+        height: 7vw;
+        margin: 1vw;
+    }
+    .mobile{
+        display: flex;
+    }
+    .mobile-hidden{
+        display: none;
+    }
+    #mobile-menu{
+        display: flex;
+        width: 9vw;
+        height: fit-content;
+        flex-direction: column;
+
+        background-color: #db0050ff;
+        
+        position: absolute;
+        top: -36vw;
+        z-index: -1;
+
+        transition: 0.3s;
+
+        justify-content: end;
+        align-items: center;
+
+        border-radius: 0px 0px 0px 3vw;
+    }
+
+
+    #searchfield{
+        height: 9vw;
+    }
+    #searchbar{
+        width: 60vw;
+        height: 7vw;
+        border-radius: 7vw;;
+    }
+    #navbar{
+        height: 9vw;
+    }
+
+    #menu{
+        display: flex;
+    }
+    #upload{
+        width: 5vw;
+        height: 5vw;
+        margin: 2vw;
+    }
+
+    #mobile-menu.open{
+        top: 9vw;
+    }
+}
