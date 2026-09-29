@@ -1,9 +1,16 @@
+:root{
+    --base-color: #db0050ff
+}
+
+
+
+
 body{
     margin: 0px;
 }
 
 #navbar{
-    background-color: #db0050ff;
+    background-color: var(--base-color);
     width: 100vw;
     height: 50px;
     display: flex;
@@ -94,6 +101,38 @@ div{
     top: 0px;
 }
 
+#results{
+    background-color: aliceblue;
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    
+    --width: 1000px;
+    --childWidth: 300px;
+    width: var(--width);
+
+
+}
+
+
+.result{
+    height: calc(150px - 20px);
+    width: calc(var(--childWidth) - 20px);
+    margin: 10px;
+    background-color: gainsboro;
+    box-sizing: border-box;
+}
+
+
+#title{
+    font-size: 60px;
+    text-decoration: underline;
+    margin: auto;
+    width: min-content;
+}
+
+
+
 
 @media screen and (max-width: 650px) and (orientation: landscape){
     .icon{
@@ -143,7 +182,7 @@ div{
         height: fit-content;
         flex-direction: column;
 
-        background-color: #db0050ff;
+        background-color: var(--base-color);
         
         position: absolute;
         top: -36vw;
