@@ -1,0 +1,275 @@
+:root{
+    --base-color: #db0050ff
+}
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0px;
+}
+
+#navbar{
+    background-color: var(--base-color);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+div{
+
+}
+
+.icon{
+    aspect-ratio: 1/1;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.settings{
+    background-image: url(icons/settings.svg);
+}
+
+#account{
+    background-image: url(icons/account.svg);
+}
+#upload{
+    background-image: url(icons/add.svg);
+    width: 30px;
+    margin: 10px;
+}
+#list{
+    background-image: url(icons/shoppinglist.svg);
+}
+#saved{
+    background-image: url(icons/recipebook.svg);
+}
+#searchbar-icon{
+    background-image: url(icons/searchbarend.svg);
+    margin: 0px;
+}
+
+#menu{
+    background-image: url(icons/chefhat.svg);
+}
+
+.mobile{
+    display: none;
+}
+
+
+#searchbar{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 400px;
+}
+
+#searchfield{
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.open{
+    top: 0px;
+}
+
+#results{
+
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    
+    --width: 1000px;
+    --childWidth: 300px;
+    width: var(--width);
+
+
+
+
+}
+
+
+.result{
+    height: calc(150px - 20px);
+    width: calc(var(--childWidth) - 20px);
+    margin: 10px;
+    background-color: gainsboro;
+    box-sizing: border-box;
+}
+
+
+#title{
+    font-size: 60px;
+    text-decoration: underline;
+    margin: auto;
+    width: min-content;
+}
+
+
+
+
+@media screen and (max-width: 650px) and (orientation: landscape){
+    :root{
+        --base-color: #91db69ff
+    }
+    .icon{
+        width: 6vw;
+        height: 6vw;
+        margin: 0.75vw;
+    }
+    #upload{
+        width: 5vw;
+        height: 5vw;
+        margin: 1.2vw;
+    }
+    #searchfield{
+        height: 6vw;
+    }
+    #searchbar{
+        width: 60vw;
+        height: 6vw;
+        border-radius: 6vw;;
+    }
+    #navbar{
+        height: 7.5vw;
+    }
+    body{
+
+    }
+
+    #title{
+        font-size: 16vw;
+    }
+    .result{
+        height: calc(33.33vw - 3vw);
+        width: calc(33.33vw - 3vw);
+        margin: 1.5vw;
+    }
+
+    #results{
+
+        flex-wrap: wrap;
+        display: flex;
+        margin: auto;
+        width: 100%;
+    }
+
+}
+
+
+
+
+@media screen and (orientation: portrait){
+    :root{
+        --base-color: #30e1b9ff
+    }
+    .icon{
+        width: 7vw;
+        height: 7vw;
+        margin: 1vw;
+    }
+    .mobile{
+        display: flex;
+    }
+    .mobile-hidden{
+        display: none;
+    }
+    #mobile-menu{
+        display: flex;
+        width: 9vw;
+        height: fit-content;
+        flex-direction: column;
+
+        background-color: var(--base-color);
+        
+        position: absolute;
+        top: -36vw;
+        z-index: -1;
+
+        transition: 0.3s;
+
+        justify-content: end;
+        align-items: center;
+
+        border-radius: 0px 0px 0px 3vw;
+    }
+
+    #title{
+        font-size: 16vw;
+    }
+    .result{
+        height: calc(50vw - 4vw);
+        width: calc(50vw - 4vw);
+        margin: 2vw;
+    }
+
+    #results{
+
+        flex-wrap: wrap;
+        display: flex;
+        margin: auto;
+        width: 100%;
+    }
+
+
+
+    #searchfield{
+        height: 9vw;
+        padding-left: 3vw;
+    }
+    #searchbar{
+        width: 60vw;
+        height: 7vw;
+        border-radius: 7vw;;
+    }
+    #navbar{
+        height: 9vw;
+    }
+
+    #menu{
+        display: flex;
+    }
+    #upload{
+        width: 5vw;
+        height: 5vw;
+        margin: 2vw;
+    }
+
+    #mobile-menu.open{
+        top: 9vw;
+    }
+
+    body{
+
+    }
+}
