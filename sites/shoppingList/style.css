@@ -182,7 +182,7 @@ input{
 }
 
 
-@media screen and (max-width: 500px){
+@media screen and (orientation: portrait){
     .group{
         width: 100%;
     }
