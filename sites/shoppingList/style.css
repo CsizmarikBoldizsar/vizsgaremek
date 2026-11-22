@@ -180,3 +180,10 @@ input{
     border-radius: 0px 3rem 3rem 0px;
 
 }
+
+
+@media screen and (max-width: 500px){
+    .group{
+        width: 100%;
+    }
+}
