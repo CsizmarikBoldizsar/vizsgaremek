@@ -89,10 +89,10 @@ span{
     align-items: center;
 }
 .title::after{
-    content: " ▾";
+    content: " ▾";
 }
 .closed .title::after{
-    content: " ▸";
+    content: " ▸";
 }
 
 .amount{
