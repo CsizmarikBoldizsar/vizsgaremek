@@ -1,0 +1,110 @@
+*{
+    font-family: arial;
+}
+
+
+.result{
+
+    min-width: 1.6rem;
+
+    width: 20%;
+
+    box-sizing: border-box;
+    margin: 1.5%;
+
+    aspect-ratio: 16/10;
+
+    border-radius: 1rem;
+
+    border: 1px black solid;
+    
+    background-image: url(https://rupanerkonyha.hu/wp-content/uploads/2017/10/DSC_0426k.jpg);
+    background-size: cover;
+    background-position: center;
+    
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+}
+img{
+    width: 100%;
+}
+
+
+.nameBox{
+    border-radius: 1.12rem 1.12rem 0px 0px;
+    
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: lavender;
+    width: 100%;
+    height: min-content;
+
+
+
+    display: flex;
+    flex-direction: column;
+    transform:translateY(calc(100% - 1.2rem));
+
+    align-items: center;
+
+    transition: 0.2s;
+
+}
+
+.title{
+    font-weight:bold;
+    text-decoration: underline;
+}
+
+.desc{
+    padding: .5rem;
+    
+}
+
+.result:hover .nameBox{
+    
+    transform:translateY(0%);
+}
+
+#base{
+    width: max-content;
+    display: flex;
+    flex-wrap:wrap;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+@media screen and (orientation: portrait) {
+    .result{
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+        aspect-ratio:unset;
+        height: 8rem;
+        
+        max-width: none;
+        
+        flex-direction: row;
+    }
+    .nameBox{
+        transform: none;
+        height: 100%;
+        width: calc(100% - 10rem);
+        border-radius: 1.12rem 0px 0px 1.12rem;
+        padding: 1rem;
+
+        transition: none;
+    }
+}
