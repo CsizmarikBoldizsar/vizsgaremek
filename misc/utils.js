@@ -23,14 +23,12 @@ function NEW(type, params, events) {
         });
     }
 
-if (events){
-    events.forEach(e=>{
-        element.addEventListener(e.type,e.event)
-    })
-}
+    if (events){
+        events.forEach(e=>{
+            element.addEventListener(e.type,e.event)
+        })
+    }
 
-
-    
     return element;
 }
 

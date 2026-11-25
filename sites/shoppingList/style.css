@@ -4,9 +4,10 @@
     font-family: sans-serif;
     user-select: none;
     --color0: #fbf5ef;
-    --color1: #f2d3ab;
-    --color2: #c69fa5;
-    --color3: #8b6d9c;
+    --color1: #ffffff;
+    --color2: gainsboro;
+    --color3: #db0050ff;
+
     --deleteColor: #ed233d;
     
     --boughtColor: #ed233d;
@@ -24,7 +25,7 @@ html{
 body{
     margin: 0px;
     width: 100%;
-    background-color: #272744;
+    background-color: white;
     overflow-x: hidden;
 }
 
